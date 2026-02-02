@@ -323,7 +323,7 @@ mod fontations_impl {
         Ok(new_name)
     }
 
-    fn build_variations_ps_name(newname: &mut Name, font: &FontRef, family_name: Option<&str>) {
+    pub fn build_variations_ps_name(newname: &mut Name, font: &FontRef, family_name: Option<&str>) {
         let fallback = best_familyname(font);
         let family_name = family_name.or(fallback.as_deref()).unwrap_or("New Font");
         let subfamily_name = best_subfamilyname(font).unwrap_or("Regular".to_string());
