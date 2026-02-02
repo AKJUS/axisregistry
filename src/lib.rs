@@ -1,3 +1,4 @@
+use gf_metadata::{AxisProto, FallbackProto};
 use std::{collections::HashSet, ops::Index};
 
 #[cfg(feature = "fontations")]
@@ -10,7 +11,6 @@ use fontations::{
 };
 use indexmap::IndexMap;
 
-include!(concat!(env!("OUT_DIR"), "/_.rs"));
 include!(concat!(env!("OUT_DIR"), "/data.rs"));
 
 const LINKED_VALUES: [(&str, (f32, f32)); 2] = [("wght", (400.0, 700.0)), ("ital", (0.0, 1.0))];
